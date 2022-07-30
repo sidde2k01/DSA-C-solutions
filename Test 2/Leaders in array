@@ -1,0 +1,17 @@
+void Leaders(int* arr,int len){
+	for(int i=0;i<len;i++){
+        bool flag=1;
+        for(int j=i+1;j<len;j++){
+            if(arr[i]<arr[j]){
+                flag=0;
+                break;
+            }
+        }
+        if(flag){
+            cout<<arr[i]<<" ";
+        }
+    }
+    
+    
+    
+}
