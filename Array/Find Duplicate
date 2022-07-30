@@ -1,0 +1,17 @@
+int duplicateNumber(int *arr, int size){
+     bool flag=0;
+    for(int i=0;i<size;i++){
+        for(int j=0;j<size;j++){
+            if(i==j){
+                continue;
+            }
+            if(arr[i]==arr[j]){
+                flag=1;
+                break;
+            }
+        }
+        if(flag){
+            return arr[i];
+        }
+    }
+}
