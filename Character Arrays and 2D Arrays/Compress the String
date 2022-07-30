@@ -1,0 +1,38 @@
+string getCompressedString(string &input) {
+    int size=1000000;
+    char compressString[size];
+    for(int i=0;input[i]!='\0';i++){
+        compressString[i]=input[i];
+    }
+    char current=compressString[0];
+    int k=1;
+    int counter=0;
+    for(int i=1;compressString[i]!='\0';i++){
+        if(compressString[i]==current){
+            k++;
+        }
+        else{
+            compressString[counter]=current;
+            counter++;
+            current=compressString[i];
+            if(k>=2){
+                compressString[counter]=char(k+48);
+                counter++;
+                k=1;
+            }
+            else{
+                k=1;
+            }
+        }
+    }
+    if(k>1){
+        compressString[counter]=current;
+        compressString[counter+1]=char(k+48);
+        compressString[counter+2]='\0';
+    }
+    else{
+        compressString[counter]=current;
+        compressString[counter+1]='\0';
+    }
+    return compressString;
+}
