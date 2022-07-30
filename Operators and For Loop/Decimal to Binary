@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main() {
+	int n;
+    cin>>n;
+    long ans=0;
+    long pv=1;
+    while(n>0){
+        int remainder=n%2;
+        ans=ans+remainder*pv;
+        pv=pv*10;
+        n=n/2;
+    }
+	cout<<ans<<endl;
+}
