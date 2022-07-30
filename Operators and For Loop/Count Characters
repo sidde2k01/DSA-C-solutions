@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    char input;
+    int count1=0;
+    int count2=0;
+    int count3=0;
+    while(input!='$'){
+    input=cin.get();
+    if((input>='a'&&input<='z')||(input>='A'&&input<='Z')){
+        count1++;
+    }
+    else if(input>='0'&&input<='9'){
+        count2++;
+    }
+    else if(input=='\n'){
+        count3++;
+    }  
+    else if(input=='\t'){
+        count3++;
+    }
+    else if(input==' '){
+        count3++;
+    }
+}
+    cout<<count1<<" "<<count2<<" "<<count3<<endl;
+  
+}
+
+
