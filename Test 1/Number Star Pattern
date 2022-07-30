@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+
+int main(){
+
+  int n;
+    cin>>n;
+    int i=1;
+    while(i<=n){
+        int j=1;
+        while(j<=n-i+1){
+            cout<<j;
+            j++;
+        }
+        int stars=2*(i-1);
+        int counter1=1;
+        while(counter1<=stars){
+            cout<<"*";
+            counter1++;
+        }
+        int m=j-1;
+        int counter2=1;
+        while(counter2<=n-i+1){
+            cout<<m;
+            m--;
+            counter2++;
+        }
+        cout<<endl;
+        i++;
+    }
+
+}
+
+
