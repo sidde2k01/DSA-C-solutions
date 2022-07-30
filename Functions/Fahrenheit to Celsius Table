@@ -1,0 +1,11 @@
+void printTable(int start, int end, int step) {
+    int counter=start;
+    while(counter<=end){
+        int celsuis=(counter-32)*(5.0/9);
+        cout<<counter<<" "<<celsuis<<endl;
+        counter=counter+step;
+    }
+    
+}
+
+
