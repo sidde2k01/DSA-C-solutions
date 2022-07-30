@@ -1,0 +1,14 @@
+void removeConsecutiveDuplicates(char input[]) {
+    char current=input[0];
+    int k=1;
+    for(int i=1;input[i]!='\0';i++){
+        if(input[i]!=current){
+           input[k]=input[i];
+            k++;
+            current=input[i];
+        }
+    }
+    input[k]='\0';
+    
+    
+}
