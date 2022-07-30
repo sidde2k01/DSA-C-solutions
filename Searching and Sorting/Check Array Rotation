@@ -1,0 +1,11 @@
+int arrayRotateCheck(int *input, int size){
+    int min=input[0];
+    int ans=0;
+    for(int i=1;i<size;i++){
+        if(input[i]<min){
+            ans=i;
+            break;
+        }
+    }
+    return ans;
+}
