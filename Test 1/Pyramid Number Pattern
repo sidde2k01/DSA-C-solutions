@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+
+  int n;
+  cin>>n;
+    int i=1;
+  while(i<=n){
+      int k=1;
+      while(k<=n-i){
+          cout<<" ";
+          k++;
+      }
+      int counter=1;
+      int j=i;
+      while(counter<=i){
+          cout<<j;
+          j--;
+          counter++;
+      }
+      int m=j+2;
+      int counter2=1;
+      while(counter2<=i-1){
+          cout<<m;
+          m++;
+          counter2++;
+      }
+      cout<<endl;
+      i++;
+  }
+
+  
+}
+
